@@ -1,0 +1,2 @@
+//Destruindo o inimigo
+	morte();
