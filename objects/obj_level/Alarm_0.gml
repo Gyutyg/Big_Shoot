@@ -1,8 +1,14 @@
-//Criando a wave
-	layer_sequence_create("Wave_inimigos", 0, 0, waves[indice]);
+//aumentando o contador
+	//contador++;
+
+
+	nivel_wave();
 	
 //Mudando o indice
-	indice++;
+	//indice++
 	
+//if(contador < 3)
+//{	
 //Tocando o alarme novamente;
 	alarm[0] = 	300;
+//}	

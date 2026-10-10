@@ -1,5 +1,6 @@
 //Função de   destruiçaõ
-	morte();
+	//morte();
+	
 
 //O player toma dano
 	other.dano_player();

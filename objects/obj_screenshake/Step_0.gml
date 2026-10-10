@@ -14,4 +14,3 @@ else
 
 //Reduzindo o valor da variável tremer
 	tremer	= lerp(tremer, 0, 0.1);
-	show_debug_message(tremer)

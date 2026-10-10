@@ -26,8 +26,8 @@
   },
   "name":"seq_wave1",
   "parent":{
-    "name":"Waves",
-    "path":"folders/Sequences/Waves.yy",
+    "name":"Waves nv 1",
+    "path":"folders/Sequences/Waves nv 1.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,
