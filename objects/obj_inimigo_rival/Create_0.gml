@@ -3,11 +3,11 @@
 //Velocidade do rival
 	vel = 1;
 //Vida rival
-	vida = 50;
+	vida = 100;
 //Taxa de tiro do rival
-	intervalo_tiro = 50;
+	intervalo_tiro = 30;
 //Timer do tiro
-	timer_tiro = 0
+	timer_tiro = 60
 	
 
 
@@ -19,6 +19,7 @@ atirando = function()
 	{
 		timer_tiro = intervalo_tiro;
 		instance_create_layer(x, y, "Tiro", obj_tiro_rival);
+		tocando_sfx(sfx_laser2,.8, 1 )
 	}
 
 }

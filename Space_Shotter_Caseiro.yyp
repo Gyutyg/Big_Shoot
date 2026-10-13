@@ -83,6 +83,7 @@
     {"id":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},},
     {"id":{"name":"scr_tween","path":"scripts/scr_tween/scr_tween.yy",},},
     {"id":{"name":"Script2","path":"scripts/Script2/Script2.yy",},},
+    {"id":{"name":"seq_rival","path":"sequences/seq_rival/seq_rival.yy",},},
     {"id":{"name":"seq_wave1","path":"sequences/seq_wave1/seq_wave1.yy",},},
     {"id":{"name":"seq_wave2","path":"sequences/seq_wave2/seq_wave2.yy",},},
     {"id":{"name":"seq_wave2b","path":"sequences/seq_wave2b/seq_wave2b.yy",},},

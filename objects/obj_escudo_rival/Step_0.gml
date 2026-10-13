@@ -23,4 +23,4 @@ if(vida_esc <= 1)
 	screenshake(20);
 	tocando_sfx(sfx_explosao2, 1, 1);
 }
-show_debug_message(vida_esc)
+

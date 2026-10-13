@@ -9,3 +9,5 @@
 	//Repetindo o alerme
 		alarm[1] = 300
 	}
+	else
+		alarm[2] = 400;

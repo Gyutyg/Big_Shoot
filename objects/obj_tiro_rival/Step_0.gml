@@ -4,6 +4,8 @@ if(y >= 544 or y < -32)
 	instance_destroy()
 }
 
+
+
 //if(instance_exists(obj_inimigo_rival))
 //{
 //	if(obj_inimigo_rival.y <= 256)
