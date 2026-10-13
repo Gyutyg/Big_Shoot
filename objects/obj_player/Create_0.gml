@@ -9,17 +9,17 @@
 
 #region Variáveis
 //Variável de velocidade
-	vel = 2;
+	vel = global.vel_p;
 //Variável do timer do tiro
 	tiro_timer		= 0;
 //Variável do intervalo entre cada tiro
-	tiro_intervalo	= 13;
+	tiro_intervalo	= global.fire_p;
 //Variável do lével do tiro
-	tiro_lv   = 1;
+	tiro_lv   = global.lv_p;
 //Variável da vida
-	vida = 3;
+	vida = global.vida_p;
 //Variável dos escudos
-	escudo = 3;
+	escudo = global.esc_p;
 //Variável para saber se tenho escudo
 	meu_escudo = noone;
 //Variável do tempo de invencibilidade ao tomar dano
@@ -82,15 +82,15 @@ controle_player = function()
 		}
 		//Ativando a função do tiro
 		//A depender do level
-		if(tiro_lv == 1)
+		if(global.lv_p == 1)
 		{
 			tiro_1();
 		}
-		else if (tiro_lv ==2)
+		else if (global.lv_p ==2)
 		{
 			tiro_2();
 		}
-		else if (tiro_lv == 3)
+		else if (global.lv_p == 3)
 		{
 			tiro_3();
 		}	
@@ -128,10 +128,10 @@ tiro_3 = function()
 //Método de level up do tiro
 tiro_lv_up = function()
 {
-	tiro_lv++
+	global.lv_p++
 	
 	//Limitando o level do tiro
-	tiro_lv = clamp(tiro_lv, 1, 3);
+	global.lv_p = clamp(global.lv_p, 1, 3);
 }
 
 desenho_icone = function(_sprite, _item, _y)
@@ -156,9 +156,9 @@ dano_player = function()
 	//Se o timer for maior naõ executa a função abaixo
 	if(timer_invencivel > 0 or meu_escudo) return;
 	
-	if(vida > 0)
+	if(global.vida_p > 0)
 	{
-		vida--;
+		global.vida_p--;
 		//se o player tomar dano, fica ivunerável durante 1s
 		timer_invencivel = tempo_invencivel;
 		//Tremendo a tela
@@ -171,7 +171,7 @@ dano_player = function()
 	}	
 	else 
 	{
-		//instance_destroy()
+		reset_player();
 		//Tremendo a tela
 		screenshake(50);
 		//Explosão
@@ -188,9 +188,9 @@ dano_player = function()
 usa_escudo = function()
 {
 	//Limitando o escudo
-	if(escudo > 0 and meu_escudo = noone)
+	if(global.esc_p > 0 and meu_escudo = noone)
 	{
-		escudo--;
+		global.esc_p--;
 		meu_escudo = instance_create_layer(x, y, "Escudo", obj_escudo);
 		//Som do escudo;
 		tocando_sfx(sfx_shieldUp,1,1);

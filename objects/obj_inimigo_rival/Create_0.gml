@@ -3,7 +3,7 @@
 //Velocidade do rival
 	vel = 1;
 //Vida rival
-	vida = 100;
+	vida = 10;
 //Taxa de tiro do rival
 	intervalo_tiro = 30;
 //Timer do tiro
@@ -26,12 +26,18 @@ atirando = function()
 
 morte = function()
 {
-	if(vida = 1)
+	if(vida <= 1)
 	{
+		
 		tocando_sfx();
 		//Ativando o screenshake
 		screenshake(50);
-		destruir(obj_explosao_player)
+		destruir(obj_explosao_player);
+		global.destino = rm_boss;
+		instance_create_layer(x, y, "Level", obj_power_up_1);
+		instance_create_layer(x, y, "Level", obj_trans_boss);
+	
+
 	}
 	else
 	{

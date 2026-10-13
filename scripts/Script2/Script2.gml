@@ -7,6 +7,13 @@
 		
 	global.intro = false;	
 	
+	//Variáveis do player
+	global.vida_p = 3;
+	global.fire_p = 13;
+	global.vel_p = 2;
+	global.esc_p = 3;
+	global.lv_p  = 1;
+	
 }
 #endregion
 
@@ -117,6 +124,14 @@ function tendo_transicao()
 		//Mudando o valor da intro
 		global.intro = false;
 
+}
+function reset_player()
+{
+	global.vida_p = 3;
+	global.fire_p = 13;
+	global.vel_p = 2;
+	global.esc_p = 3;
+	global.lv_p  = 1
 }
 
 #endregion

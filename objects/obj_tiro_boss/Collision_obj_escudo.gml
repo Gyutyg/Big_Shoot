@@ -1,0 +1,1 @@
+	destruir(obj_exp_tiro_boss);

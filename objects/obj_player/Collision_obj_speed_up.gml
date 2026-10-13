@@ -1,5 +1,5 @@
 //Aumenta a velocidade do player
-	vel += .5;
+	global.vel_p += .5;
 	
 //Destruindo
 	instance_destroy(other);
