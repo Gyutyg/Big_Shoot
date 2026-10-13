@@ -9,6 +9,5 @@
 	
 //if(contador < 3)
 //{	
-//Tocando o alarme novamente;
-	alarm[0] = 	300;
+
 //}	

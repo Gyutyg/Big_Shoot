@@ -13,7 +13,7 @@
 //Variável do timer do tiro
 	tiro_timer		= 0;
 //Variável do intervalo entre cada tiro
-	tiro_intervalo	= 12;
+	tiro_intervalo	= 13;
 //Variável do lével do tiro
 	tiro_lv   = 1;
 //Variável da vida

@@ -28,6 +28,9 @@ morte = function()
 		screenshake(10)
 		//Iniciando o barulho de explosão
 		tocando_sfx();
+		var _chance = random(100);
+		if(_chance == 100)
+			instance_create_layer(x, y, "Level", obj_power_up_1);
 	}
 	else
 	{

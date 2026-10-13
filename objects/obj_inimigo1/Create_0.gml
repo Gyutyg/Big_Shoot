@@ -27,6 +27,7 @@ morte = function()
 {
 	if(vida = 1)
 	{
+		var _obj_criado = choose(obj_speed_up, obj_tiro_taxa);
 		//Iniciando o barulho de explosão
 		tocando_sfx();
 		//Ativando o screenshake
@@ -35,8 +36,8 @@ morte = function()
 		var _chance = random(100);
 		//Se a chance for maior que 90
 		if(_chance >= 90)
-			//Dropa o power up
-			instance_create_layer(x, y, "Level", obj_power_up_1);
+			//Dropa o power up de velocidade ou taxa de tiro
+			instance_create_layer(x, y, "Level", _obj_criado);
 	}	
 	else vida--;
 }

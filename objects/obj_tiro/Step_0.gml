@@ -1,5 +1,5 @@
 //Destruindo o tiro ao sair da tela
-if(y <= -32) 	
+if(y <= 0) 	
 {	
 	instance_destroy()
 }
