@@ -28,4 +28,3 @@ else
 		intervalo_tiro = 50;
 	}
 }
-show_debug_message(vida)

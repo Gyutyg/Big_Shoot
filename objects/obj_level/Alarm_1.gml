@@ -7,7 +7,7 @@
 		indice2++;
 		
 	//Repetindo o alerme
-		alarm[1] = 300
+		alarm[1] = 360
 	}
 	else
 		alarm[2] = 400;

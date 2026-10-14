@@ -1,5 +1,6 @@
 #region Globais
 {
+	global.contador_morte = 0;
 	
 	global.debug = false;
 	
@@ -8,7 +9,7 @@
 	global.intro = false;	
 	
 	//Variáveis do player
-	global.vida_p = 3;
+	global.vida_p = 5;
 	global.fire_p = 13;
 	global.vel_p = 2;
 	global.esc_p = 3;
@@ -109,7 +110,6 @@ function tocando_sfx(_sfx = sfx_explosao2, _pitch1 = .9, _pitch2 = 1.1)
 function destino()
 {
 	room_goto(global.destino);	
-
 }
 
 //Função para a transição
@@ -127,7 +127,7 @@ function tendo_transicao()
 }
 function reset_player()
 {
-	global.vida_p = 3;
+	global.vida_p = 5;
 	global.fire_p = 13;
 	global.vel_p = 2;
 	global.esc_p = 3;

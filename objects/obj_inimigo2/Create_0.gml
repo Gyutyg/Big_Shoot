@@ -1,5 +1,5 @@
  //Vida do inimigo
-	vida = 10;
+	vida = 8;
 	
 //Variável que controla o meu estado
 	estado = "chegando";
@@ -29,7 +29,7 @@ morte = function()
 		//Iniciando o barulho de explosão
 		tocando_sfx();
 		var _chance = random(100);
-		if(_chance == 100)
+		if(_chance <= 5)
 			instance_create_layer(x, y, "Level", obj_power_up_1);
 	}
 	else

@@ -1,5 +1,5 @@
 #region Variáveis
-	vida = 700;
+	vida = 1000;
 	
 	estado = "entrada";
 	
@@ -7,6 +7,8 @@
 	timer_tiro1 = 200;
 	
 	limite_esf = 0
+	
+	morreu = 0;
 	
 	variavel_efeito_mola();
 	variavel_efeito_shader();
@@ -19,7 +21,10 @@
 morte = function()
 {
 	if(vida <= 1)
-		instance_destroy();
+	{
+		instance_create_layer(x - 40, y, "Particulas", obj_exp_boss1);
+		morreu = 1
+	}	
 	else
 	{
 		vida--;
@@ -30,6 +35,7 @@ morte = function()
 
 maquina_de_estado = function()
 {
+	if(morreu == 1) exit;
 	switch(estado)
 	{
 		case "entrada":
@@ -37,13 +43,13 @@ maquina_de_estado = function()
 			{
 				vspeed = .5;
 				screenshake(7);
-				vida = 700;
+				vida = 1000;
 			}
 			else 
 			{
 				vspeed = 0;
 				var _prox1 = choose("ataque1", "ataque2", "ataque3");
-				estado = "ataque2";
+				estado = _prox1;
 				alarm[0] = 300;
 			}
 		break;

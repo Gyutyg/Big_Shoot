@@ -3,7 +3,7 @@
 //Velocidade do rival
 	vel = 1;
 //Vida rival
-	vida = 10;
+	vida = 100;
 //Taxa de tiro do rival
 	intervalo_tiro = 30;
 //Timer do tiro
@@ -28,7 +28,6 @@ morte = function()
 {
 	if(vida <= 1)
 	{
-		
 		tocando_sfx();
 		//Ativando o screenshake
 		screenshake(50);

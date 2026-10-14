@@ -6,4 +6,3 @@
 	retorno_efeito_mola();
 	revertendo_shader()
 	
-	show_debug_message(estado);

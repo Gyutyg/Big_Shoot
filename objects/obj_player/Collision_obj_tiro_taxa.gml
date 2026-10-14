@@ -1,5 +1,5 @@
 //diminuindo o intervalo de tiro ao coletar o power up
-	global.fire_p -= 1;
+	global.fire_p -= 1.5;
 //Destruindo
 	instance_destroy(other);
 	var _expl = instance_create_layer(other.x, other.y, "Level", obj_explosao_tiro);

@@ -30,6 +30,7 @@
 	variavel_efeito_mola();
 //Variável que mostra quando o player tomou dano
 	variavel_efeito_shader();
+	
 
 	
 
@@ -94,6 +95,10 @@ controle_player = function()
 		{
 			tiro_3();
 		}	
+		else if (global.lv_p == 4)
+		{
+			tiro_4();
+		}	
 		
 		//Quando o player atira ativa o intervalo
 		tiro_timer = tiro_intervalo;
@@ -125,13 +130,20 @@ tiro_3 = function()
 	tiro_2();
 }
 
+tiro_4 = function()
+{
+	var _tiro1 = instance_create_layer(x, y - 7, "Tiro", obj_tiro);
+	tiro_1();
+	tiro_2();
+}
+
 //Método de level up do tiro
 tiro_lv_up = function()
 {
 	global.lv_p++
 	
 	//Limitando o level do tiro
-	global.lv_p = clamp(global.lv_p, 1, 3);
+	global.lv_p = clamp(global.lv_p, 1, 4);
 }
 
 desenho_icone = function(_sprite, _item, _y)
@@ -182,6 +194,7 @@ dano_player = function()
 		inicia_transicao();
 		//Avisando que começou a transição
 		global.intro = true;
+		global.contador_morte++
 	}	
 }	
 

@@ -36,7 +36,7 @@ nivel_wave = function()
 	if(indice1 >= array_length(waves1) -1)
 	{
 	
-		alarm[1] = 300
+		alarm[1] = 360
 
 	}
 	
